@@ -25,10 +25,11 @@ export class MainLayoutComponent implements OnInit {
         {// Формирование объекта прогноза
           const forecast: Weather = {
           date: new Date (res.daily[i].dt * 1000),
-          dayTemperature: res.daily[i].temp.day,
+          maxTemperature: res.daily[i].temp.max,
+          minTemperature: res.daily[i].temp.min,
           description: res.daily[i].weather[0].description,
           icon: `http://openweathermap.org/img/w/${res.daily[i].weather[0].icon}.png`
-        }
+        };
           this.allForecast.push(forecast); // Добавление объекта в массив
         }
       }

@@ -1,6 +1,7 @@
 export interface Weather {
   date: Date;
-  dayTemperature: number;
+  minTemperature: number;
+  maxTemperature: number;
   description: string;
   icon: string;
 }

@@ -7,7 +7,7 @@
         <h5 class="weather-item__day">{{forecast.date|date:'EEEE'}}</h5>
         <img src="{{forecast.icon}}" alt="">
         <p class="weather-item__description">{{forecast.description}}</p>
-        <p class="weather-item__temperature">{{forecast.dayTemperature | number:'1.0-0'}}°C</p>
+        <p class="weather-item__temperature">{{(forecast.maxTemperature+forecast.minTemperature)/2| number:'1.0-0'}}°C</p>
       </div>
     </div>
   </div>
