@@ -1,0 +1,14 @@
+
+<div class="weather">
+  <div class="container">
+    <div class="weather__wrap row">
+      <div class="weather-item__wrap col-xs-12" *ngFor="let forecast of allForecast">
+        <h3 class="weather-item__date">{{forecast.date| date: 'd MMMM'}}</h3>
+        <h5 class="weather-item__day">{{forecast.date|date:'EEEE'}}</h5>
+        <img src="{{forecast.icon}}" alt="">
+        <p class="weather-item__description">{{forecast.description}}</p>
+        <p class="weather-item__temperature">{{forecast.dayTemperature | number:'1.0-0'}}°C</p>
+      </div>
+    </div>
+  </div>
+</div>
